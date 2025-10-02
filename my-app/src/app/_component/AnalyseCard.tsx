@@ -1,4 +1,4 @@
-import {Article} from '@/app/api/_component/types';
+import { Article } from './types';
 import Link from 'next/link';
 
 

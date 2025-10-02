@@ -11,7 +11,7 @@ export default function CompanySearch() {
   const [searchQuery,setSearchQuery] = useState('')
   const [apiCount,setApiCount] = useState(0)
 
-  const confirmationMessage = (e: React.FormEvent) => {
+  const confirmationMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setOpenModal(true)
     setSearchQuery(e.currentTarget.company.value + ' ' + e.currentTarget.country.value)

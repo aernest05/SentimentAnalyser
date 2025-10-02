@@ -6,7 +6,7 @@ import { CreateNewCard } from "./_component/Misc";
 
 export default function Index(){
   const router = useRouter()
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const query:string = e.currentTarget.query.value
 

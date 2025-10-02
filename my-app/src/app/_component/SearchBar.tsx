@@ -9,7 +9,7 @@ export default function SearchBar() {
     const router = useRouter();
     const { searchDatas} = useSearchData();
     
-    const handleSearch = (e: React.FormEvent) => {
+    const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const query:string = e.currentTarget.query.value
 
