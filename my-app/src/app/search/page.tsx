@@ -5,11 +5,12 @@ import SearchBar from "../_component/SearchBar";
 import { useSearchParams } from "next/navigation";
 import LoadingAnimation,{CreateNewCard} from '@/app/_component/Misc'
 import { useSearchData } from "../hooks/useSearchData";
+import { Suspense } from "react";
 
 // Mock data in your component
 
 
-export default function SearchHistoryPage() {
+export function SearchHistoryContent() {
     const searchParams = useSearchParams()
     const query = searchParams.get('search_query');
     const {searchDatas, isLoading} = useSearchData(query)
@@ -54,5 +55,13 @@ export default function SearchHistoryPage() {
             <CreateNewCard/>
         </div>
     </div>
+  );
+}
+
+export default function SearchHistoryPage() {
+  return (
+    <Suspense fallback={<LoadingAnimation />}>
+      <SearchHistoryContent />
+    </Suspense>
   );
 }
