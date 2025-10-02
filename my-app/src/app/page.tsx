@@ -12,6 +12,7 @@ export default function Index(){
 
         const url = new URL(`http://localhost:3000/search`);
         url.searchParams.set('search_query', encodeURIComponent(query));
+        
 
         if (query.trim()) {
             router.push(url.toString());

@@ -20,7 +20,7 @@ export default function CompanySearch() {
   useEffect(()=> {
     const fetchAPI = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/api/usage')
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/usage`)
         if (!response.ok) throw new Error('Failed to fetch')
         const result: number = await response.json()
         setApiCount(result)
@@ -31,7 +31,7 @@ export default function CompanySearch() {
   }, [])
   const handleSearch = () => {
         setIsLoading(true)
-        const backendURL = new URL('http://127.0.0.1:5000/api/new_entry')
+        const backendURL = new URL(`${process.env.NEXT_PUBLIC_API_URL}/api/new_entry`)
         backendURL.searchParams.set('search_params',searchQuery)
 
         const fetchGoogleAPI = async () => {

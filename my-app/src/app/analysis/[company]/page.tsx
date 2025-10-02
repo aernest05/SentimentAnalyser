@@ -5,7 +5,7 @@ export default async function fetchSentiment({params, }: {params: Promise<{ comp
   const awaitedParams = await params;
   const company = decodeURIComponent(awaitedParams.company);
   try {
-        const url = new URL(`http://127.0.0.1:5000/api`);
+        const url = new URL(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api`);
         url.searchParams.set('company', company);
 
         const response = await fetch(url.toString())

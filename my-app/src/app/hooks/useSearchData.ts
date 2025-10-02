@@ -12,7 +12,7 @@ export function useSearchData(query?: string | null) {
     useEffect(() => {
         const fetchSearchHistory = async () => {
             try {
-                const url = new URL(`http://127.0.0.1:5000/api/search`)
+                const url = new URL(`${process.env.NEXT_PUBLIC_API_URL}/api/search`)
                 if (query) {
                     url.searchParams.set('search_query', query);
                 }
