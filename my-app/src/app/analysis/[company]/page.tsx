@@ -18,6 +18,6 @@ export default async function fetchSentiment({params, }: {params: { company: str
         
       } catch (err) {
         console.error('Fetch error:', err);
-        return [];
+        return <div>Error loading sentiment data</div>;
       }
 }

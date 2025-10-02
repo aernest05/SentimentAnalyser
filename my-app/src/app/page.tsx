@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { CreateNewCard } from "./_component/Misc";
 
 
-export default function index(){
+export default function Index(){
   const router = useRouter()
   const handleSearch = (e: React.FormEvent) => {
         e.preventDefault();
