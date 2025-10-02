@@ -22,7 +22,7 @@ def get_cached_analysis(company_name):
 def set_cache(company_name, data):
     """Store in cache with timestamp"""
     cache[company_name] = (data, datetime.now())
-    
+
 @app.route('/')
 def home():
     return jsonify({"status": "Backend is running!", "message": "Test successful"})
@@ -49,8 +49,3 @@ def new_entry():
 def api_usage():
     api_count = sentiment_analyser.count_api_usage()
     return jsonify(api_count)
-
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)  # NOT 127.0.0.1
-
