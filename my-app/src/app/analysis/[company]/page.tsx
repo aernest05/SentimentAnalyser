@@ -1,7 +1,7 @@
 
 import { AnalysisCardPage } from '../AnalysisPageClient';
 
-export default async function fetchSentiment({params, }: {params: { company: string };}) {
+export default async function fetchSentiment({params, }: {params: Promise<{ company: string }>;}) {
   const awaitedParams = await params;
   const company = decodeURIComponent(awaitedParams.company);
   try {
