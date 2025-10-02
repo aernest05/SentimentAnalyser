@@ -49,3 +49,6 @@ def new_entry():
 def api_usage():
     api_count = sentiment_analyser.count_api_usage()
     return jsonify(api_count)
+
+if __name__=='__main__':
+    app.run()
