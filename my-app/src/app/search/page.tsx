@@ -10,7 +10,7 @@ import { Suspense } from "react";
 // Mock data in your component
 
 
-export function SearchHistoryContent() {
+function SearchHistoryContent() {
     const searchParams = useSearchParams()
     const query = searchParams.get('search_query');
     const {searchDatas, isLoading} = useSearchData(query)
