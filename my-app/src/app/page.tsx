@@ -8,14 +8,10 @@ export default function Index(){
   const router = useRouter()
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const query:string = e.currentTarget.query.value
-
-        const url = new URL(`http://localhost:3000/search`);
-        url.searchParams.set('search_query', encodeURIComponent(query));
-        
+        const query:string = e.currentTarget.query.value     
 
         if (query.trim()) {
-            router.push(url.toString());
+            router.push(`/search?search_query=${encodeURIComponent(query)}`);
         }
     }
   return (
