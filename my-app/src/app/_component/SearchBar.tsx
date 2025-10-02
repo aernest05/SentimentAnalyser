@@ -13,11 +13,8 @@ export default function SearchBar() {
         e.preventDefault();
         const query:string = e.currentTarget.query.value
 
-        const url = new URL(`http://localhost:3000/search`);
-        url.searchParams.set('search_query', encodeURIComponent(query));
-
         if (query.trim()) {
-            router.push(url.toString());
+        router.push(`/search?search_query=${encodeURIComponent(query)}`);
         }
     }
     return (
