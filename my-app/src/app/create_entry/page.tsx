@@ -23,6 +23,7 @@ export default function CompanySearch() {
         const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/usage`)
         if (!response.ok) throw new Error('Failed to fetch')
         const result: number = await response.json()
+        console.log(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/usage`)
         setApiCount(result)
       } catch (err) {
         console.log(err)
@@ -31,7 +32,7 @@ export default function CompanySearch() {
   }, [])
   const handleSearch = () => {
         setIsLoading(true)
-        const backendURL = new URL(`${process.env.NEXT_PUBLIC_API_URL}/api/new_entry`)
+        const backendURL = new URL(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/new_entry`)
         backendURL.searchParams.set('search_params',searchQuery)
 
         const fetchGoogleAPI = async () => {
