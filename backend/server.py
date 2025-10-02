@@ -22,6 +22,10 @@ def get_cached_analysis(company_name):
 def set_cache(company_name, data):
     """Store in cache with timestamp"""
     cache[company_name] = (data, datetime.now())
+    
+@app.route('/')
+def home():
+    return jsonify({"status": "Backend is running!", "message": "Test successful"})
 
 @app.route("/api", methods = ['GET'])
 def return_analyse_company():
