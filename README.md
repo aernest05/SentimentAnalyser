@@ -5,7 +5,7 @@ A full-stack web application that analyzes public sentiment about companies by s
 ## Live Demo
 
 - **Live Website**: [https://sentiment-analyser-ivbzg8t2h-aernest05s-projects.vercel.app](https://sentiment-analyser-ivbzg8t2h-aernest05s-projects.vercel.app)
-- **Demo Video**: [Watch Demo]([https://drive.google.com/file/d/your-video-id/view?usp=sharing](https://drive.google.com/file/d/19UYfUWaZqhy0l7gOJOYjkE8eWR5ybKYR/view?usp=sharing))
+- **Demo Video**: [Watch Demo](https://drive.google.com/file/d/19UYfUWaZqhy0l7gOJOYjkE8eWR5ybKYR/view?usp=sharing)
 
 ## Features
 
